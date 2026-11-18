@@ -151,23 +151,32 @@ $$
 L = (y - x_1w_1 + x_2w_2 + b)^2
 $$
 
-Now that we have our loss equation, let's differentiate in respect to each of the variables w1, w2, and b it to get the <strong>the change</strong> in loss.
+Now that we have our loss equation, let's differentiate in respect to each of the variables to get the <strong>the change</strong> in loss.
 
-
+Derivative in respect to w1
 ```math
 \frac{\partial z}{\partial w_1}
-=
-\frac{\partial}{\partial w_1}
-(x_1w_1 + x_2w_2 + b)
+= 2(x1)(y - x_1w_1 + x_2w_2 + b)
 
-\frac{\partial z}{\partial w_2}
-=
-\frac{\partial}{\partial w_2}
-(x_1w_1 + x_2w_2 + b)
-
-\frac{\partial z}{\partial b}
-=
-\frac{\partial}{\partial w_2}
-(x_1w_1 + x_2w_2 + b)
 ```
+
+Derivative in respect to w2
+```math
+\frac{\partial z}{\partial w_1}
+= 2(x2)(y - x_1w_1 + x_2w_2 + b)
+```
+
+Derivative in respect to w1
+```math
+\frac{\partial z}{\partial w_1}
+= 2(x1)(y - x_1w_1 + x_2w_2 + b)
+
+```
+
+Derivative in respect to b
+```math
+\frac{\partial z}{\partial w_1}
+= 2(y - x_1w_1 + x_2w_2 + b)
+```
+
 
