@@ -59,7 +59,7 @@ The loss function measures how far a neuron's prediction is from the expected ou
 For a single prediction, using Squared Error Loss:
 
 $$
-L = (y - \hat{y})^2
+L = (\hat{y} - y)^2
 $$
 
 Where:
@@ -142,7 +142,7 @@ We'll also get out loss equation:
 
 
 $$
-L = (y - z)^2
+L = (z - y)^2
 $$
 
 And substitute our prediction equation in it:
