@@ -172,4 +172,51 @@ Derivative in respect to b
 = 2(x_1w_1 + x_2w_2 + b - y)
 ```
 
+Now that we have our new weights, we need to actually put them in the model:
+
+$$
+w_1^{\text{new}} = w_1^{\text{old}} - \eta \frac{\partial L_{\text{avg}}}{\partial w_1}
+$$
+
+And this is what all that looks like in code:
+
+```javascript
+function calculateGradients(trainingData, model){
+
+    const weightsX = [];
+    const weightsY = [];
+    const biases = [];
+
+    for (let i = 0; i < trainingData.length; i++){
+
+        const respectToW1 = 2 * trainingData[i].inputs[0] * (
+        trainingData[i].inputs[0] * model.weights[0] + trainingData[i].inputs[1] * model.weights[1] + 
+        model.bias - trainingData[i].expected
+        );
+
+        const respectToW2 = 2 * trainingData[i].inputs[1] * (
+        trainingData[i].inputs[0] * model.weights[0] + trainingData[i].inputs[1] * model.weights[1] + 
+        model.bias - trainingData[i].expected
+        );
+
+        const respectToBias = 2 * (
+        trainingData[i].inputs[0] * model.weights[0] + trainingData[i].inputs[1] * model.weights[1] + 
+        model.bias - trainingData[i].expected
+        );
+
+        weightsX.push(respectToW1);
+        weightsY.push(respectToW2);
+        biases.push(respectToBias);
+
+    }
+
+    updateModel(model, [weightsX, weightsY, biases], 0.1);
+}
+
+function updateModel(model, weights, LEARNING_RATE){
+    model.weights[0] = model.weights[0] - (LEARNING_RATE * calculateAverage(weights[0]));
+    model.weights[1] = model.weights[1] - (LEARNING_RATE * calculateAverage(weights[1]));
+    model.bias = model.bias - (LEARNING_RATE * calculateAverage(weights[2]));
+}
+```
 
