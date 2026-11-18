@@ -156,14 +156,14 @@ Now that we have our loss equation, let's differentiate in respect to each of th
 Derivative in respect to w1
 ```math
 \frac{\partial z}{\partial w_1}
-= 2(x1)(y - x_1w_1 + x_2w_2 + b)
+= 2x1(y - x_1w_1 + x_2w_2 + b)
 
 ```
 
 Derivative in respect to w2
 ```math
 \frac{\partial z}{\partial w_2}
-= 2(x2)(y - x_1w_1 + x_2w_2 + b)
+= 2x2(y - x_1w_1 + x_2w_2 + b)
 ```
 
 Derivative in respect to b
