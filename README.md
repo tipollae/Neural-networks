@@ -151,7 +151,7 @@ $$
 L = (y - x_1w_1 + x_2w_2 + b)^2
 $$
 
-Now that we have our loss equation, let's differentiate in respect to each of the variables to get the <strong>the change</strong> in loss.
+Now that we have our loss equation, let's differentiate in respect to each of the variables to get <strong>the change</strong> in loss.
 
 Derivative in respect to w1
 ```math
