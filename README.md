@@ -159,5 +159,15 @@ Now that we have our loss equation, let's differentiate in respect to each of th
 =
 \frac{\partial}{\partial w_1}
 (x_1w_1 + x_2w_2 + b)
+
+\frac{\partial z}{\partial w_2}
+=
+\frac{\partial}{\partial w_2}
+(x_1w_1 + x_2w_2 + b)
+
+\frac{\partial z}{\partial b}
+=
+\frac{\partial}{\partial w_2}
+(x_1w_1 + x_2w_2 + b)
 ```
 
