@@ -180,6 +180,18 @@ $$
 w_1^{\text{new}} = w_1^{\text{old}} - \eta \frac{\partial L_{\text{avg}}}{\partial w_1}
 $$
 
+Where:
+
+$w_1^{\text{new}}$ = The updated weight
+
+$w_1^{\text{old}}$ = The current weight
+
+$\eta$ = Learning rate
+
+$L_{\text{avg}}$ = Average loss across all training examples
+
+$\frac{\partial L_{\text{avg}}}{\partial w_1}$ = Average gradient of the loss with respect to the first weight
+
 And this is what all that looks like in code:
 
 ```javascript
