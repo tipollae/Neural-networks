@@ -171,7 +171,7 @@ Derivative in respect to b
 \frac{\partial L}{\partial b}
 = 2(x_1w_1 + x_2w_2 + b - y)
 ```
-
+<br><br>
 Now that we have our new weights, we need to actually put them in the model:
 
 $$
