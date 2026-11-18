@@ -124,6 +124,31 @@ const trainingData = [
 
 but if we try get its result to: 1 AND 0, it probably will produce something like -5 depending on the weights. Which isn't very useful.
 
-So boom:
+So what do we do?
+
+Let's get our equation:
+
+$$
+z = \sum_{i=1}^{n} x_i w_i + b
+$$
+
+For our case of basic AND gate problems, which only have two inputs, let's simplify change this to:
+
+$$
+z = x_1w_1 + x_2w_2 + b
+$$
+
+And now we calculate the gradient of this function in respect to each of the variables w1, w2, and b. What this will do is tell the neuron it's loss in comparison to the expected outcome. <br>
+
+$$
+\boxed{\frac{\partial z}{\partial w_1}=x_1}
+$$
 
 
+$$
+\boxed{\frac{\partial z}{\partial w_2}=x_2}
+$$
+
+$$
+\boxed{\frac{\partial z}{\partial b}=1}
+$$
