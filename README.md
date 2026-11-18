@@ -126,7 +126,7 @@ but if we try get its result to: 1 AND 0, it probably will produce something lik
 
 So what do we do?
 
-Let's get our equation:
+Let's get our prediction equation:
 
 $$
 z = \sum_{i=1}^{n} x_i w_i + b
@@ -138,17 +138,24 @@ $$
 z = x_1w_1 + x_2w_2 + b
 $$
 
-And now we calculate the gradient of this function in respect to each of the variables w1, w2, and b. What this will do is tell the neuron it's loss in comparison to the expected outcome. <br>
-
-$$
-\boxed{\frac{\partial z}{\partial w_1}=x_1}
-$$
+We'll also get out loss equation:
 
 
 $$
-\boxed{\frac{\partial z}{\partial w_2}=x_2}
+L = (y - z)^2
 $$
 
+And substitute our prediction equation in it:
+
 $$
-\boxed{\frac{\partial z}{\partial b}=1}
+L = (y - x_1w_1 + x_2w_2 + b)^2
+$$
+
+Now that we have our loss equation, let's differentiate in respect to each of the variables w1, w2, and b it to get the <strong>the change</strong> in loss.
+
+$$
+\frac{\partial z}{\partial w_1}
+=
+\frac{\partial}{\partial w_1}
+(x_1w_1 + x_2w_2 + b)
 $$
