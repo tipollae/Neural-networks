@@ -162,20 +162,13 @@ Derivative in respect to w1
 
 Derivative in respect to w2
 ```math
-\frac{\partial z}{\partial w_1}
+\frac{\partial z}{\partial w_2}
 = 2(x2)(y - x_1w_1 + x_2w_2 + b)
-```
-
-Derivative in respect to w1
-```math
-\frac{\partial z}{\partial w_1}
-= 2(x1)(y - x_1w_1 + x_2w_2 + b)
-
 ```
 
 Derivative in respect to b
 ```math
-\frac{\partial z}{\partial w_1}
+\frac{\partial z}{\partial b}
 = 2(y - x_1w_1 + x_2w_2 + b)
 ```
 
