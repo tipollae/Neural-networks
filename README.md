@@ -172,7 +172,9 @@ Derivative in respect to b
 = 2(x_1w_1 + x_2w_2 + b - y)
 ```
 <br><br>
-Now that we have our new weights, we need to actually put them in the model:
+Now that we have our gradients, we now know by how much roughly in what direction the weights should change.
+
+So we calculate the new weights:
 
 $$
 w_1^{\text{new}} = w_1^{\text{old}} - \eta \frac{\partial L_{\text{avg}}}{\partial w_1}
