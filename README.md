@@ -153,9 +153,11 @@ $$
 
 Now that we have our loss equation, let's differentiate in respect to each of the variables w1, w2, and b it to get the <strong>the change</strong> in loss.
 
-$$
+
+```math
 \frac{\partial z}{\partial w_1}
 =
 \frac{\partial}{\partial w_1}
 (x_1w_1 + x_2w_2 + b)
-$$
+```
+
