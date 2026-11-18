@@ -4,7 +4,7 @@
 #### I randomly got interested in how I could make an object detection system from scratch. So my first step was to learn how a single neuron works: what weights were, loss functions and gradients for backpropagation.
 
 ## 16th November:
-### (basicNeuron.js)
+### ----- (basicNeuron.js) -----
 
 ### Key note: For u nerds out there this neuron model was a model with no activation function because I didn't know what that was at the time.
 
