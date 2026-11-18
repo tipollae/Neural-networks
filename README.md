@@ -109,7 +109,7 @@ But with that we now could get the losses of each input based of the neurons pre
 
 But this model kinda sucks if it can't learn.
 
-We can feed this model two inputs, 0 and 1, and give it a basic AND gate problems:
+We can feed this model two inputs, 0 and 1, and give it basic AND gate problems:
 
 ```javascript
 const trainingData = [
