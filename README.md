@@ -6,7 +6,7 @@
 ## 16th November:
 ### (basicNeuron.js)
 
-### Key note: For u nerds out there, this neuron model was a model with no activation function because I didn't know what that was at the time.
+### Key note: For u nerds out there this neuron model was a model with no activation function because I didn't know what that was at the time.
 
 The first step was to create a single neuron. For simplification my model used a 1 dimensional array to represent the matrix of the neuron. (And also cuz I didn't know how matrices work when I started this) <br>
 
@@ -122,6 +122,8 @@ const trainingData = [
 ];
 ```
 
-but if we try get it's result to: 1 AND 0, it probably will produce something like -5 depending on the weights. Which isn't very useful.
+but if we try get its result to: 1 AND 0, it probably will produce something like -5 depending on the weights. Which isn't very useful.
+
+So boom:
 
 
