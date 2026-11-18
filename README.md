@@ -6,6 +6,8 @@
 ## 16th November:
 ### (basicNeuron.js)
 
+### Key note: For u nerds out there, this neuron model was a model with no activation function because I didn't know what that was at the time.
+
 The first step was to create a single neuron. For simplification my model used a 1 dimensional array to represent the matrix of the neuron. (And also cuz I didn't know how matrices work when I started this) <br>
 
 ```javascript
