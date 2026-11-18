@@ -50,10 +50,7 @@ function neuron(inputs, weights, bias){
 }
 ```
 
-Next up was learning about loss functions.
-
-
-### Single Neuron Loss Function
+Next up was learning about <strong>loss function.</strong>
 
 The loss function measures how far a neuron's prediction is from the expected output.
 
@@ -68,21 +65,61 @@ Where:
 - $y$ = Expected output (target)
 - $\hat{y}$ = Predicted output from the neuron
 
-**For multiple training samples (Mean Squared Error):**
+From this equation, I had to figure out how I could calculate the loss of each input and get the average of those losses. 
 
-$$
-MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
-$$
+So this is what I did:
 
-Where:
-- $n$ = Total number of training samples
-- $y_i$ = Expected output for sample $i$
-- $\hat{y}_i$ = Predicted output for sample $i$
+```javascript
+function calculateLoss(prediction, expected) {
+    return (prediction - expected) ** 2;
+}
 
-**Example:**
+function calculateLossesIndividual(model, bias){
 
-If the expected output is $1$ and the neuron predicts $0.8$:
+    const losses = [];
+    const modelWeights = model.weights;
 
-$$
-L = (1 - 0.8)^2 = 0.04
-$$
+    for (let i = 0; i < trainingData.length; i++){
+
+        const prediction = neuron(trainingData[i].inputs, modelWeights, bias);
+        const loss = calculateLoss(prediction, trainingData[i].expected)
+        losses.push(loss);
+
+    }
+
+    return losses;
+
+}
+
+function calculateAverage(input) {
+    
+    const sum = input.reduce((accumulator, current) => accumulator + current, 0);
+    const ave = sum/input.length;
+
+    return ave;
+
+}
+```
+
+Yes I know that I didn't need to have a seperate average function and basically have an unecessary extra loop, but it was 2AM and I wasn't exactly thinking straight then.
+
+But with that we now could get the losses of each input based of the neurons predictions and get the average loss of those two inputs. Yipe.
+
+<img width="100%" alt="neuron drawing" src="https://github.com/user-attachments/assets/0e1a5741-0867-4df6-a45f-694b61595d55" />
+
+But this model kinda sucks if it can't learn.
+
+We can feed this model two inputs, 0 and 1, and give it a basic AND gate problems:
+
+```javascript
+const trainingData = [
+    { inputs: [0, 0], expected: 0 },
+    { inputs: [0, 1], expected: 0 },
+    { inputs: [1, 0], expected: 0 },
+    { inputs: [1, 1], expected: 1 }
+];
+```
+
+but if we try get it's result to: 1 AND 0, it probably will produce something like -5 depending on the weights. Which isn't very useful.
+
+
