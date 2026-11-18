@@ -132,7 +132,7 @@ $$
 z = \sum_{i=1}^{n} x_i w_i + b
 $$
 
-For our case of basic AND gate problems, which only have two inputs, let's simplify change this to:
+For our case of basic AND gate problems, which only have two inputs, let's simplify and change this to:
 
 $$
 z = x_1w_1 + x_2w_2 + b
