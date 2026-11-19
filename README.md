@@ -230,7 +230,7 @@ function updateModel(model, weights, LEARNING_RATE){
 }
 ```
 
-
+<br><br><br>
 
 ## 17th - 18th November:
 ### ----- (neuralLayer.js) -----
