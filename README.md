@@ -1,4 +1,4 @@
-<img width="904" height="332" alt="neurons drawing" src="https://github.com/user-attachments/assets/0419a852-4237-4b09-963f-042d5673a74b" /># Neural-networks
+# Neural-networks
 ### My progression on understanding how neural networks work.
 
 #### I randomly got interested in how I could make an object detection system from scratch. So my first step was to learn how a single neuron works: what weights were, loss functions and gradients for backpropagation.
