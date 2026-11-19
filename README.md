@@ -271,7 +271,7 @@ consider 4 neurons with weights
 
 In our single neuron example from before, 1 neuron had two weights, but what would an example of multiple neurons with their own weights look like? Well it'd be this thing.
 
-The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron, and each weight basically meant that the neuron is processing different inputs. In the case of my ugly drawing, each neuron is processing 3 inputs, with each input having a weight.
+The matrix represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron, and each weight basically meant that the neuron is processing different inputs. In the case of my ugly drawing, each neuron is processing 3 inputs, with each input having a weight.
 
 ```javascript
 const weights = [
@@ -413,7 +413,7 @@ Activation functions allow a neural network to learn nonlinear relationships, bu
 Remember our single neuron example, where we trained a neuron to solve basic AND gate problems? Well, an AND gate is what's called a linearly separable problem, meaning you can separate its TRUE and FALSE outputs using a single straight line. This makes it possible for a single neuron to learn the relationship.
 
 <img width="426" height="410" alt="example 2" src="https://github.com/user-attachments/assets/527a0f04-4c70-4467-9076-5c574ff9cff7" />
-<img width="458" height="436" alt="example 3" src="https://github.com/user-attachments/assets/827eb087-dec0-4b13-8c32-c5955d3c0968" />
+<img width="426" height="410" alt="example 3" src="https://github.com/user-attachments/assets/827eb087-dec0-4b13-8c32-c5955d3c0968" />
 
 
 But what if we gave our neural network something more complicated, like identifying cats and dogs in images?
