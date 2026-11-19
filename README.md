@@ -418,7 +418,7 @@ Remember our single neuron example, where we trained a neuron to solve basic AND
 
 But what if we gave our neural network something more complicated, like identifying cats and dogs in images?
 
-Obviously, cats and dogs can look completely different depending on their breed, position, lighting, and a bunch of other factors. Because of this, the relationship between the image's pixels and whether it's a cat or dog is much more complicated. We generally can't just draw a single straight line to separate all images of cats from dogs.
+Cats and dogs can look completely different depending on their breed, position, lighting, and a bunch of other factors. Because of this, the relationship between the image's pixels and whether it's a cat or dog is much more complicated. We generally can't just draw a single straight line to separate all images of cats from dogs.
 
 This is where nonlinear activation functions come in. They allow neural networks to learn more complicated relationships by introducing nonlinearity between layers. Without them, stacking even 100 dense layers would still be mathematically equivalent to having a single dense layer.
 
