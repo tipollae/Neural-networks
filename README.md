@@ -253,7 +253,7 @@ $$
 
 Where:
 
-- $Z$ = A matrix of outputs
+- $Z$ = A matrix of pre-activated outputs
 - $X$ = A matrix of inputs
 - $W$ = A matrix of weights
 - $B$ = A matrix of biases
@@ -408,4 +408,18 @@ Cool we can do all that stuff but guess what, even if we stack 100 layers of neu
 
 So what do we do? This is where <strong>activation functions</strong> come in.
 
-At the core of it, an activation functions allows each layer to be its own individual layer and process things differently. Let's implement forward-propogation.
+Activation functions allow a neural network to learn nonlinear relationships, but what exactly does that mean?
+
+Remember our single neuron example, where we trained a neuron to solve basic AND gate problems? Well, an AND gate is what's called a linearly separable problem, meaning you can separate its TRUE and FALSE outputs using a single straight line. This makes it possible for a single neuron to learn the relationship.
+
+<img width="426" height="410" alt="example 2" src="https://github.com/user-attachments/assets/527a0f04-4c70-4467-9076-5c574ff9cff7" />
+<img width="458" height="436" alt="example 3" src="https://github.com/user-attachments/assets/827eb087-dec0-4b13-8c32-c5955d3c0968" />
+
+
+But what if we gave our neural network something more complicated, like identifying cats and dogs in images?
+
+Obviously, cats and dogs can look completely different depending on their breed, position, lighting, and a bunch of other factors. Because of this, the relationship between the image's pixels and whether it's a cat or dog is much more complicated. We generally can't just draw a single straight line to separate all images of cats from dogs.
+
+This is where nonlinear activation functions come in. They allow neural networks to learn more complicated relationships by introducing nonlinearity between layers. Without them, stacking even 100 dense layers would still be mathematically equivalent to having a single dense layer.
+
+With nonlinear activation functions, however, those layers can work together to learn patterns that a single linear transformation couldn't represent.
