@@ -253,7 +253,7 @@ $$
 
 Where:
 
-- $Z$ = A matrix of output
+- $Z$ = A matrix of outputs
 - $X$ = A matrix of inputs
 - $W$ = A matrix of weights
 - $B$ = A matrix of biases
