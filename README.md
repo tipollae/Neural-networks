@@ -423,3 +423,6 @@ Cats and dogs can look completely different depending on their breed, position, 
 This is where nonlinear activation functions come in. They allow neural networks to learn more complicated relationships by introducing nonlinearity between layers. Without them, stacking even 100 dense layers would still be mathematically equivalent to having a single dense layer.
 
 With nonlinear activation functions, those layers can work together to learn patterns that a single linear transformation couldn't represent.
+
+## 20th November:
+### ----- (backPropogation.js) -----
