@@ -251,9 +251,9 @@ $$
 Z = XW + B
 $$
 
-this is the formula before-activation, and we learn what activation function are in a bit.
+this is the formula before activation, and we learn what activation functions are in a bit.
 
-Basically though, this formula allows for multiple neurons in a layer to make a linear output, and another thing. Z is no longer a prediction in comparison to out single neuron, it's now just an output. The prediction happens later at the output layer of neurons who actually dictate a prediction, that's when we cover softmax and converting losses to probabilities but we'll see that later, for now, Z is just an output.
+Basically though, this formula allows for multiple neurons in a layer to make a linear output, and another thing. Unlike our previous single neuron example, we're now dealing with a hidden layer (a hidden layer are the layers between the input and output layers), so Z isn't necessarily our final prediction. Instead, it's an output that gets passed on to the next layer. The final prediction is produced at the output layer.
 
 <img width="100%" alt="output drawing matrices" src="https://github.com/user-attachments/assets/745aba5f-5b7f-46f7-83de-52ca0f7254d8" />
 
@@ -263,13 +263,12 @@ consider 4 neurons with weights
 
 In our single neuron example from before, 1 neuron had two weights, but what would an example of multiple neurons with their own weight look like? Well it'd be this thing.
 
-The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron.
+The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron, and each weight basically meant that the neuron is processing different inputs. In this case in my ugly drawing, each neuron is processing 3 inputs, with each input having a weight.
 
 ```javascript
 const weights = [
     [1,2,3,4],
     [5,1,7,8],
     [1,8,3,0],
-    [5,1,7,5]
 ]
 ```
