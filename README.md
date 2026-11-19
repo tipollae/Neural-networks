@@ -271,7 +271,7 @@ consider 4 neurons with weights
 
 In our single neuron example from before, 1 neuron had two weights, but what would an example of multiple neurons with their own weights look like? Well it'd be this thing.
 
-The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron, and each weight basically meant that the neuron is processing different inputs. In this case in my ugly drawing, each neuron is processing 3 inputs, with each input having a weight.
+The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron, and each weight basically meant that the neuron is processing different inputs. In the case of my ugly drawing, each neuron is processing 3 inputs, with each input having a weight.
 
 ```javascript
 const weights = [
