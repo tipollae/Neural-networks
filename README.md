@@ -251,6 +251,14 @@ $$
 Z = XW + B
 $$
 
+Where:
+
+- $Z$ = The output
+- $X$ = A matrix of inputs
+- $W$ = A matrix of weights
+- $B$ = A matrix of biases
+- $\frac{\partial L_{\text{avg}}}{\partial w_1}$ = Average gradient of the loss with respect to the first weight
+
 this is the formula before activation, and we learn what activation functions are in a bit.
 
 Basically though, this formula allows for multiple neurons in a layer to make a linear output, and another thing. Unlike our previous single neuron example, we're now dealing with a hidden layer (a hidden layer are the layers between the input and output layers), so Z isn't necessarily our final prediction. Instead, it's an output that gets passed on to the next layer. The final prediction is produced at the output layer.
