@@ -230,3 +230,13 @@ function updateModel(model, weights, LEARNING_RATE){
 }
 ```
 
+
+
+## 17th - 18th November:
+### ----- (neuralLayer.js) -----
+
+Now that I learned how a single neuron worked, next was how multiple neurons work together in a layer, a dense layer as it's called.
+
+I first had to learn how matrices worked and their operations but I really can't be bothered explaining that so just know that I learned them :/
+
+
