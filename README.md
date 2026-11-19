@@ -297,10 +297,6 @@ const weights1 = [
 const biases1 = [[0.1, 0.2, 0.1, 0.3]];
 ```
 
-this is what that code looks like:
-
-<img width="647" height="566" alt="example 1" src="https://github.com/user-attachments/assets/3cf2e459-cfec-48cf-b6d6-0f0e825ea8f8" />
-
 all we have to do is plug in our values into our new equation for getting outputs from a layer of neurons:
 
 $$
