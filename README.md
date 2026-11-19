@@ -280,3 +280,136 @@ const weights = [
     [1,8,3,0],
 ]
 ```
+
+Now all we have to do to get an output from our layer of neurons is plug in our values
+
+So say for a layer of neurons with inputs:
+
+```javascript
+const inputs = [[1, 2, 3],[3,4,1],[5,6,1]];
+
+const weights1 = [
+    [0.2, -0.4, 0.1, 0.5],
+    [0.5, -0.1, 0.3, 0.2],
+    [0.3, 0.7, -0.6, 0.4]
+];
+
+const biases1 = [[0.1, 0.2, 0.1, 0.3]];
+```
+
+this is what that code looks like:
+
+<img width="647" height="566" alt="example 1" src="https://github.com/user-attachments/assets/3cf2e459-cfec-48cf-b6d6-0f0e825ea8f8" />
+
+all we have to do is plug in our values into our new equation for getting outputs from a layer of neurons:
+
+$$
+Z = XW + B
+$$
+
+```javascript
+function denseLayer(inputs, weights, biases){
+
+    const dotProduct = multiplyMatrices(inputs, weights);
+    applyBiases(biases, dotProduct);
+
+    return dotProduct;
+
+}
+
+function multiplyMatrices(A, B) {
+
+    try{
+        const innerDimensionA = A[0].length;
+        const innerDimensionB = B.length;
+
+        if (innerDimensionA !== innerDimensionB){
+            throw new Error(`Inner dimensions are not equal. A(${innerDimensionA}) !== B(${innerDimensionB})`)
+        }
+
+    }
+
+    catch(error){
+        throw new Error(error.message);
+    }
+
+    const res = [];
+
+    for (let i = 0; i < A.length; i++){
+
+        const rowA = A[i];
+        res.push([]);
+
+        for (let j = 0; j < B[0].length; j++){
+
+            let dotProduct = 0;
+
+            for (let k = 0; k < B.length; k++){
+
+                let calc = B[k][j] * rowA[k];
+                dotProduct += calc;
+
+            }
+
+            res[i].push(dotProduct);
+
+        }
+
+    }
+
+    return res;
+
+}
+
+function applyBiases(biases, output){
+
+    try{
+        const dimensionsBIASX = biases[0].length;
+        const dimensionsOUTPUTX = output[0].length;
+
+        const validInput = !(dimensionsBIASX == dimensionsOUTPUTX);
+
+        if (validInput){
+            throw new Error(`X-axis dimensions are not equal BIAS(${dimensionsBIASX}) !== OUTPUT(${dimensionsOUTPUTX})`)
+        }
+
+    }
+
+    catch(error){
+        throw new Error(error.message);
+    }
+
+    for (let i = 0; i < output.length; i++){
+
+        for (let j = 0; j < biases[0].length; j++){
+            output[i][j] += biases[0][j];
+        }
+
+    }
+
+    return output;
+
+}
+```
+
+if that's a lot to take in, all you have to pay attention to is:
+
+```javascript
+function denseLayer(inputs, weights, biases){
+
+    const dotProduct = multiplyMatrices(inputs, weights);
+    applyBiases(biases, dotProduct);
+
+    return dotProduct;
+
+}
+
+```
+
+cuz that's literally just the equation in code. Mainly added the other bs just to show I know what's going on under the hood 🥀
+
+Cool we can do all that stuff but guess what, even if we stack 100 layers of neurons together, they mathematically will only be equivalent to a single layer. Which sorta defeats the purpose of having more layers in the first place.
+
+So what do we do? This is where <strong>activation functions</strong> come in.
+
+At the core of it, an activation functions allows each layer to be its own individual layer and process things differently. Let's implement forward-propogation.
