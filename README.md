@@ -1,4 +1,4 @@
-# Neural-networks
+<img width="904" height="332" alt="neurons drawing" src="https://github.com/user-attachments/assets/0419a852-4237-4b09-963f-042d5673a74b" /># Neural-networks
 ### My progression on understanding how neural networks work.
 
 #### I randomly got interested in how I could make an object detection system from scratch. So my first step was to learn how a single neuron works: what weights were, loss functions and gradients for backpropagation.
@@ -239,4 +239,36 @@ Now that I learned how a single neuron worked, next was how multiple neurons wor
 
 I first had to learn how matrices worked and their operations but I really can't be bothered explaining that so just know that I learned them :/
 
+so for getting the prediction of a single neuron it was:
 
+$$
+z = \sum_{i=1}^{n} x_i w_i + b
+$$
+
+but now we have:
+$$
+Z = XW + B
+$$
+
+this is the formula before-activation, and we learn what activation function are in a bit.
+
+Basically though, this formula allows for multiple neurons in a layer to make a linear output, and another thing. Z is no longer a prediction in comparison to out single neuron, it's now just an output. The prediction happens later at the output layer of neurons who actually dictate a prediction, that's when we cover softmax and converting losses to probabilities but we'll see that later, for now, Z is just an output.
+
+<img width="100%" alt="output drawing matrices" src="https://github.com/user-attachments/assets/745aba5f-5b7f-46f7-83de-52ca0f7254d8" />
+
+consider 4 neurons with weights
+
+<img width="100%" alt="neurons drawing" src="https://github.com/user-attachments/assets/283d3a8a-5e12-46e6-9bb7-ab0e89806665" />
+
+In our single neuron example from before, 1 neuron had two weights, but what would an example of multiple neurons with their own weight look like? Well it'd be this thing.
+
+The matrix on the right represents the weights of each neuron, each column in the matrix are weights that belongs to a single neuron.
+
+```javascript
+const weights = [
+    [1,2,3,4],
+    [5,1,7,8],
+    [1,8,3,0],
+    [5,1,7,5]
+]
+```
