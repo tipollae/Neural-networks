@@ -246,6 +246,7 @@ z = \sum_{i=1}^{n} x_i w_i + b
 $$
 
 but now we have:
+
 $$
 Z = XW + B
 $$
